@@ -12,3 +12,15 @@ var arrayOfQuotes = [
         "quote":"The best revenge is massive success."
     }
 ]
+
+function randomSelector(arrayLength) {
+    return Math.floor(Math.random() * arrayLength);
+}
+
+function generateQuote() {
+    var randomNumber = randomSelector(arrayOfQuotes.length);
+
+    document.getElementById("quoteOutput").innerHTML = '"' + arrayOfQuotes[randomNumber].quote + '"';
+
+    document.getElementById("authorOutput").innerHTML = "-" + arrayOfQuotes[randomNumber].author;
+}
